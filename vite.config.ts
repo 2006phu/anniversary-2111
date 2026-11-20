@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "pages" ? "/anniversary-2111/" : "/",
+  base: mode === "pages" ? "/for-you/" : "/",
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {
