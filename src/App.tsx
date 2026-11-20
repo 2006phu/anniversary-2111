@@ -85,36 +85,34 @@ export function App() {
     <div className="relative min-h-[100dvh] w-full selection:bg-[var(--wax-wine)] selection:text-[var(--text-cream)]">
       <AmbientBackdrop />
 
-      {/* React Bits Topography interactive contour backdrop on initial entry */}
-      {stage === "gate" && (
-        <div
-          className="pointer-events-none fixed inset-0 z-0 opacity-75"
-          aria-hidden="true"
-        >
-          <Suspense fallback={null}>
-            <Topography
-              color="#c9a46b"
-              lineCount={isMobileView ? 14 : 20}
-              lineWidth={1.15}
-              majorLines={true}
-              elevation={0.95}
-              detail={isMobileView ? 0.2 : 0.35}
-              speed={0.18}
-              morph={0.16}
-              glow={isMobileView ? 0.24 : 0.48}
-              brightness={0.85}
-              opacity={0.62}
-              fog={0.42}
-              mouseInteraction={!isMobileView}
-              hoverEffect="lift"
-              mouseStrength={0.5}
-              clickEffect="pulse"
-              intro={true}
-              dpr={isMobileView ? 1 : undefined}
-            />
-          </Suspense>
-        </div>
-      )}
+      {/* React Bits Topography interactive contour backdrop across all stages */}
+      <div
+        className="pointer-events-none fixed inset-0 z-0 opacity-70"
+        aria-hidden="true"
+      >
+        <Suspense fallback={null}>
+          <Topography
+            color="#c9a46b"
+            lineCount={isMobileView ? 14 : 20}
+            lineWidth={1.15}
+            majorLines={true}
+            elevation={0.95}
+            detail={isMobileView ? 0.2 : 0.35}
+            speed={0.18}
+            morph={0.16}
+            glow={isMobileView ? 0.24 : 0.48}
+            brightness={0.85}
+            opacity={0.62}
+            fog={0.42}
+            mouseInteraction={!isMobileView}
+            hoverEffect="lift"
+            mouseStrength={0.5}
+            clickEffect="pulse"
+            intro={true}
+            dpr={isMobileView ? 1 : undefined}
+          />
+        </Suspense>
+      </div>
 
       {stage === "gate" && (
         <AnniversaryGate
