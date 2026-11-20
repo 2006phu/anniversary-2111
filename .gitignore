@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.*
+*.local
+*.tsbuildinfo
+/*.jpg
+.DS_Store
+Thumbs.db
+scripts/.font_cache
+scripts/.letter_preview_on_paper.png
